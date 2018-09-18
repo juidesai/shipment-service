@@ -12,7 +12,7 @@ import java.util.List;
 @FeignClient(name = "order-service")
 public interface ShipmentOrderProxyClient {
 
-    @RequestMapping(value = "/orders/accountId/{accountId}")
+    @RequestMapping(value = "/orders/accounts/accountId/{accountId}")
     List<Orders> findOrdersByAccountId(@PathVariable(value = "accountId") long accountId);
 
     @RequestMapping(value = "/orders/{orderId}/orderLineItems")
