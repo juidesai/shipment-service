@@ -11,7 +11,7 @@ pipeline {
        }
        stage('Deploy'){
                   steps{
-                      sh 'cf push shipment-service -p ./build/libs/com.solstice.shipmentservice-0.0.1-SNAPSHOT.jar'
+                      sh 'cf push shipment-service -p ./build/libs/com.solstice.shipmentservice-0.0.1-SNAPSHOT.jar --random-route'
                   }
        }
     }
